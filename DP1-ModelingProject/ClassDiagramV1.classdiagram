@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="40db0e84-041f-4e70-9a29-95bfef372b8a" name="ClassDiagramV1" linkedPackageId="af6e25b8-538e-4ba0-aee9-ec8070d13249" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="a4fb4f96-527f-4d70-b094-72d6ea9d196e">
+      <profileInstance Id="98789c46-52b9-4ddf-9356-0f520e236180" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2d43ebae-ddc5-493b-9e2a-0f5143801366">
+      <profileInstance Id="cab88ee9-d3af-4e34-b69a-265e94ffa7fa" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="d5671ba3-90c4-4bf6-8a51-562a1fcc0a8d" name="t">
+        <elementDefinition Id="88742630-6bde-4eac-9ffc-389299765d1e" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <Interface Id="05e84c22-fc4c-4cd6-a0d3-b9caa32e961b" name="Gate" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="da4cb588-86d0-4f7d-9448-518bc91bceb6" />
+              <ownedAttributes>
+                <property Id="74362cf6-df0a-4ae6-a4ba-8e33dc24bab5" name="Edges" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5369d353-f21c-4c2d-a9e0-e635e3dfa8da" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="135a5875-d1c6-4068-8a1d-2dc47998f9d8" LastKnownName="List&lt;Edge&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="461fa152-0062-4ba2-aaee-0f97cf11b477" name="A" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c3d99507-241b-4e4c-a096-9df89aa56572" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a3447753-83f9-4ff0-b46a-3cc301d641bb" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </property>
+                <property Id="d3b8a421-d6b2-4e85-84e6-95fe76fd0fd2" name="B" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="48a6fa1b-26de-4605-a232-9c5f18c29809" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6a3c681c-92cd-4fd4-8ed7-68dbb8a8fa2e" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </property>
+                <property Id="8f64b325-b2ee-4b44-887c-c915e9793fb5" name="Result" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1ac90c93-976d-45db-8047-568d4d0b1ef7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d45d0b18-c295-4d5c-95d0-06705145c6b7" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributes>
+              <ownedOperations>
+                <operation Id="7ad031ef-cbbf-4e1d-b08d-60158b9d7e1e" name="compute" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="89c9f5c2-b92a-479a-8d74-27c91a989e8d" />
+                </operation>
+                <operation Id="6d9451dc-e402-469b-9c0f-5962dc65bedc" name="result" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="24e8bc8a-9e7c-4e25-a0c6-8a157a1b4c05" />
+                </operation>
+              </ownedOperations>
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="4bf62614-51d3-4e54-a09f-ca84fd2e2129" name="ANDGate" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="81f76111-82b1-4c41-91bb-37e7218d54c7" />
+              <suppliersInternal>
+                <interfaceRealization Id="e32edb5e-12c7-473c-8662-a0040e29cbad">
+                  <interfaceMoniker Id="05e84c22-fc4c-4cd6-a0d3-b9caa32e961b" LastKnownName="Gate" />
+                  <elementDefinition Id="5b153c3c-e861-4d2e-add0-fc09533e89a0" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="9b0d7759-013c-4323-beb1-e8336cbceecc" name="compute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="79ec4008-c09a-4db0-84c0-e5198fa5c0a4" />
+                </operation>
+                <operation Id="1d2ed154-eaed-4422-a186-febdbb31c5a1" name="result" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="80d9f7d9-f85c-420b-bb7a-fa1fcca5f357" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="490d1893-c726-4787-ba43-8c88265dca00" name="ORGate" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="ab1629de-cd59-4c5d-aba7-98dfa8efa114" />
+              <suppliersInternal>
+                <interfaceRealization Id="aa05a6d4-53a0-4e8f-8d89-d991cf5f11fa">
+                  <interfaceMoniker Id="05e84c22-fc4c-4cd6-a0d3-b9caa32e961b" LastKnownName="Gate" />
+                  <elementDefinition Id="984ac8ae-a4bb-4b26-be51-24cee3dcf32f" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="d38f20cc-afe7-4b13-9617-b74e8e7f53ad" name="compute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="59cfca9f-e7e9-460a-931f-98a90e479174" />
+                </operation>
+                <operation Id="71ab7350-cd07-4d7c-96bf-69f6afd24f41" name="result" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9eb01b09-6a75-4a42-9faa-5b07ce84b62d" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="f0241680-6d09-4090-be45-f7fa36570b09" name="XORGate" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="efc33c47-7aa9-45f3-aae5-e41d7cfb89bb" />
+              <suppliersInternal>
+                <interfaceRealization Id="82ea6fa3-f6e4-4e29-b528-45d8d1305ad8">
+                  <interfaceMoniker Id="05e84c22-fc4c-4cd6-a0d3-b9caa32e961b" LastKnownName="Gate" />
+                  <elementDefinition Id="85902d6c-6a73-45ca-8187-95fa07c2dce5" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="b1534a0f-4d5c-4aa3-a15a-cc5d69894e2b" name="compute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="dbbd718c-39f5-40f9-8db3-d780114cad8e" />
+                </operation>
+                <operation Id="7395c962-37b2-4737-b90d-0e395eb6fccc" name="result" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f35ea3f5-f952-4f83-9a6e-700a091fe5f9" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="6cef658e-d766-448c-a80d-5d3d93232c7a" name="NANDGate" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="1f9b0bc7-5731-4c65-891e-4048f88f6874" />
+              <suppliersInternal>
+                <interfaceRealization Id="6cf2956d-7a3d-4da7-9ac4-767f11ff9e98">
+                  <interfaceMoniker Id="05e84c22-fc4c-4cd6-a0d3-b9caa32e961b" LastKnownName="Gate" />
+                  <elementDefinition Id="5ed3b14a-d292-4f5e-b75d-ae2cd3caf1a4" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="9ade98e2-4755-4361-8283-715a98c6cffc" name="compute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="0ff58d4b-8fa8-4cfc-b66a-4bedc8636474" />
+                </operation>
+                <operation Id="abfbef6a-64ca-4315-a2b2-f7a73a507c78" name="result" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9002e319-3655-4cd9-ae05-fc0a337e415b" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a0b73cb6-7826-4ff6-95fb-e5ad8edae259" name="NOTGate" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="79e07795-5f9d-47e3-9eda-f878388ec3cb" />
+              <suppliersInternal>
+                <interfaceRealization Id="f2bb7be9-aaf2-4a1b-b0c2-988fe98a27a0">
+                  <interfaceMoniker Id="05e84c22-fc4c-4cd6-a0d3-b9caa32e961b" LastKnownName="Gate" />
+                  <elementDefinition Id="60c6405a-f9cd-4448-8ed0-55b19f50dffb" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="cfdf626c-1e17-42f3-8628-44f9aac0977b" name="compute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="949278a9-8864-4b8e-aede-031a9e475806" />
+                </operation>
+                <operation Id="de137d12-3f81-4bce-a91e-7c1baa93fe4d" name="result" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="39bb6380-450a-45ba-ae4d-3cccf876bce6" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="457dfed7-cb54-4f56-b4fa-ad41934fae65" name="Circuit" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="89718c35-749b-4421-85f4-49b63fd28599" />
+              <targetEnds>
+                <association Id="972c6c04-0b58-48c4-a357-bf02a449a8ea" isDerived="false" sourceEndRoleName="Circuit" targetEndRoleName="Gate" isLeaf="false" isAbstract="false">
+                  <interfaceMoniker Id="05e84c22-fc4c-4cd6-a0d3-b9caa32e961b" LastKnownName="Gate" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7c62a089-6eab-4d71-b1e1-731a8ab64291" name="Circuit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="79bffe60-6676-499c-8f44-a2a12f073b2c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2e1839d5-17b6-4b4c-876d-ffb8ac664a8e" name="Gate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="43e61280-ba5d-4e10-93ef-b13887c5c8d3" name="Lower" value="*">
+                            <elementDefinition Id="dbb3e095-051d-41cb-a80f-4ac32446bb3d" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="2bd36cea-b343-4ff9-a583-760d4c863cf9" name="Upper" value="*">
+                            <elementDefinition Id="e6c76030-4410-402d-8fae-51035bd5cb3f" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="963a4170-53f1-4a50-9909-95e0faf57adc" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="c7d496ca-9119-479e-9723-1cbcc3431d72" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="c913c767-af3a-45e1-aae8-b994a4b6c162" name="NORGate" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="4961f04b-975b-48aa-a820-b474c3951f9d" />
+              <suppliersInternal>
+                <interfaceRealization Id="86216acc-cd5c-4b74-8146-0e2bf9dda0a3">
+                  <interfaceMoniker Id="05e84c22-fc4c-4cd6-a0d3-b9caa32e961b" LastKnownName="Gate" />
+                  <elementDefinition Id="d030011b-118c-4084-838f-08bb8a4e4a3c" />
+                </interfaceRealization>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="7519ff92-3e19-4a02-8a04-53dc4d6f07fd" name="compute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c58ced3c-715e-4d28-861a-36884d032d2a" />
+                </operation>
+                <operation Id="c0aa8071-0f76-4ed5-92ad-630ad6f87cdc" name="result" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d16cd540-98b2-4b29-b117-bac5b3b8b76e" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="2d4e5f4e-6fb8-491f-ae1c-936f25ca7986" name="Simulator" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="f7c99398-f5bf-4270-a2ff-bfb07b2cbee2" />
+              <targetEnds>
+                <association Id="935364e8-4205-46a4-a6b5-ae88678bd0bf" isDerived="false" sourceEndRoleName="Simulator" targetEndRoleName="Circuit" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="457dfed7-cb54-4f56-b4fa-ad41934fae65" LastKnownName="Circuit" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="346c510e-5e02-4c3c-9c5b-76bafca308e2" name="Simulator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="3be695b7-4f56-4367-94ba-d319d1d5494b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2c4b740b-735a-4df7-933e-cbf5d86a107e" name="Circuit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="8a987238-d3a3-4cac-b20b-474c0a3cd137" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="722bd776-d39d-4a86-87ea-b54f67a87b24" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="732be0d0-e4f4-4b3a-b061-5c8200267684" name="Edge" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="f3335c76-459d-4223-ac05-5721b87fe0ba" />
+              <targetEnds>
+                <association Id="7c4c6f38-c644-4ae2-a68f-e189638459a9" isDerived="false" sourceEndRoleName="Edge" targetEndRoleName="Gate" isLeaf="false" isAbstract="false">
+                  <interfaceMoniker Id="05e84c22-fc4c-4cd6-a0d3-b9caa32e961b" LastKnownName="Gate" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="d4822eaf-98bf-467d-8dae-1dc27a84864b" name="Edge" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="c69c5002-b36d-480b-b80a-84361b7a038f" name="Lower" value="2">
+                            <elementDefinition Id="79d6282d-6b44-4e3c-97cb-1f6237e88048" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="cdc8c50c-5eff-4935-9329-c7e78c15e4f9" name="Upper" value="2">
+                            <elementDefinition Id="7877a687-d9f0-4f95-b9c1-a069ca4b0a7e" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="8f306042-42a6-44db-8e72-d05a64736b08" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="914b6506-23ed-4c5b-9aed-3c6102e62c35" name="Gate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="e05744d4-0e46-490f-8710-d45c9697ce15" name="Lower" value="*">
+                            <elementDefinition Id="3e143f80-32cd-419e-94eb-15dc4727c1cb" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="35aee434-f139-4f39-87fe-80dc06d81b4b" name="Upper" value="*">
+                            <elementDefinition Id="1df030e9-9efc-4195-88fe-d1187d0bb61e" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="f98ccd53-99a4-4b5e-b2ed-9478e9fb3d89" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="3c84a710-cc87-4a33-8468-9b329119cb2b" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="05421070-ba59-44f8-8120-9ab4d1afcb8f" name="Parent" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a8cd0738-1d53-418b-9077-99e60f311a0a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c2cb8960-155d-4b64-b22d-5265e2f3dc66" LastKnownName="Gate" />
+                  </type_NamedElement>
+                </property>
+                <property Id="8034532b-3be1-4813-b6d0-a804b2f2e237" name="Child" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="20d899dc-2f94-434f-b6c4-00074ee22f77" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="aa6e01f1-30be-408e-a905-4aa01f40856b" LastKnownName="Gate" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="cd723f10-6567-4356-bbb0-24328825d18a" name="Controller">
+        <elementDefinition Id="ea9a6ebd-a4d9-4e66-88c9-6600e41f8d92" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="4e0e729e-66da-4040-8f40-169a3df8d981" name="View">
+        <elementDefinition Id="6ee9f9d5-55f1-408e-971c-4a5dbfce5a9f" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="71727428-f286-4803-8152-dee0144a822e" name="Services">
+        <elementDefinition Id="1c2516ac-9c39-4e74-b8ce-816c49316d98" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="fc1077dc-f681-4aea-8dff-6d15d039b540" name="FileParser" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="364b54e4-2386-4dba-a405-6805f5a0d571" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="135a5875-d1c6-4068-8a1d-2dc47998f9d8" name="List&lt;Edge&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Edge&gt;">
+        <elementDefinition Id="fa447cd5-d826-4b8e-8f3a-71498ca52ce5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d45d0b18-c295-4d5c-95d0-06705145c6b7" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a3447753-83f9-4ff0-b46a-3cc301d641bb" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6a3c681c-92cd-4fd4-8ed7-68dbb8a8fa2e" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="aa6e01f1-30be-408e-a905-4aa01f40856b" name="Gate" isAbstract="false" isLeaf="false" cachedFullName="DP1-ModelingProject::t::Gate">
+        <elementDefinition Id="da4cb588-86d0-4f7d-9448-518bc91bceb6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c2cb8960-155d-4b64-b22d-5265e2f3dc66" name="Gate" isAbstract="false" isLeaf="false" cachedFullName="DP1-ModelingProject::t::Gate">
+        <elementDefinition Id="da4cb588-86d0-4f7d-9448-518bc91bceb6" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="af6e25b8-538e-4ba0-aee9-ec8070d13249" name="DP1-ModelingProject">
+    <elementDefinition Id="2033e480-4241-481b-965f-d38de3e0e7ce" />
+  </package>
+</logicalClassDesignerModel>
