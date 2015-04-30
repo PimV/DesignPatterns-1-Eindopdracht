@@ -19,6 +19,18 @@ namespace DP_1.Model
 
         public bool result()
         {
+            if (!A && !B)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        public List<Gate> Edges { get; set; }
+
+        public void addEdge(Gate g)
+        {
             throw new NotImplementedException();
         }
     }

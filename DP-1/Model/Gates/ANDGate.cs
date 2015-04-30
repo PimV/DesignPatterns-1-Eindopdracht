@@ -20,12 +20,25 @@ namespace DP_1.Model
 
         public bool result()
         {
-            throw new NotImplementedException();
+            if (A && B)
+            {
+                return true;
+            }
+            return false;
+
         }
 
         public ANDGate()
         {
             Console.WriteLine("AND gate created");
+        }
+
+
+        public List<Gate> Edges { get; set; }
+
+        public void addEdge(Gate g)
+        {
+            throw new NotImplementedException();
         }
     }
 }

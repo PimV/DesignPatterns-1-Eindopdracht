@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DP_1.Model.Gates;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace DP_1.Model
 
         public List<Gate> Gates { get; set; }
         public Gate Root { get; set; }
+        public Gate Cin { get; set; }
 
         public Circuit()
         {
@@ -18,19 +20,27 @@ namespace DP_1.Model
             this.Root = null;
         }
 
-        public void createRoot()
-        {
-
-        }
-
-        public void createGate(bool A, bool B)
-        {
-
-        }
-
         public void addGate(Gate gate)
         {
-
+            this.Gates.Add(gate);
         }
+        public void linkGate(Gate from, Gate to)
+        {
+            from.Edges.Add(to);
+            to.Edges.Add(from);
+        }
+
+        public Gate createGate(bool A, bool B, GateEnum type)
+        {
+            Gate gate = GateFactory.createGate(type);
+            gate.A = A;
+            gate.B = B;
+            gate.Edges = new List<Gate>();
+            return gate;
+        }
+
+
+
+
     }
 }

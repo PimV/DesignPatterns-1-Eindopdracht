@@ -10,6 +10,15 @@
         name="Gate"
         isAbstract="false"
         isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="f53761d2-64d1-4631-bbf1-e5a1c0865afd">
+            <enumerationMoniker
+              Id="93d141de-3fea-4a88-9284-cd39ce727f7d"
+              LastKnownName="GateEnum"
+              LastKnownLocation="Package_0925.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributes>
           <property
             Id="5369d353-f21c-4c2d-a9e0-e635e3dfa8da"
@@ -551,6 +560,33 @@
       <undefinedType
         Id="fa447cd5-d826-4b8e-8f3a-71498ca52ce5"
         name="List&lt;Edge&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8da7516e-2fa8-4cc7-9d79-17be0c26469c"
+        name="GateFactory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="93d141de-3fea-4a88-9284-cd39ce727f7d"
+        name="GateEnum"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="8227a75c-a06e-4e39-a71a-c3815950432f"
+            name="Or" />
+          <enumerationLiteral
+            Id="322aaf31-16ba-438a-b11d-6d29eed687da"
+            name="And" />
+          <enumerationLiteral
+            Id="0ce772fa-3450-4ac6-9f24-c914451ecd8b"
+            name="Not" />
+        </ownedLiterals>
+      </enumeration>
     </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -20,6 +20,14 @@ namespace DP_1.Model
 
         public bool result()
         {
+            return !A;
+        }
+
+
+        public List<Gate> Edges { get; set; }
+
+        public void addEdge(Gate g)
+        {
             throw new NotImplementedException();
         }
     }

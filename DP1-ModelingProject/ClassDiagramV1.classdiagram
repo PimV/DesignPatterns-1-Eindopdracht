@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="40db0e84-041f-4e70-9a29-95bfef372b8a" name="ClassDiagramV1" linkedPackageId="af6e25b8-538e-4ba0-aee9-ec8070d13249" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="a4fb4f96-527f-4d70-b094-72d6ea9d196e">
-      <profileInstance Id="98789c46-52b9-4ddf-9356-0f520e236180" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="2d43ebae-ddc5-493b-9e2a-0f5143801366">
-      <profileInstance Id="cab88ee9-d3af-4e34-b69a-265e94ffa7fa" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="d5671ba3-90c4-4bf6-8a51-562a1fcc0a8d" name="t">
@@ -22,6 +8,12 @@
           <packageHasNamedElement>
             <Interface Id="05e84c22-fc4c-4cd6-a0d3-b9caa32e961b" name="Gate" isAbstract="false" isLeaf="false">
               <elementDefinition Id="da4cb588-86d0-4f7d-9448-518bc91bceb6" />
+              <suppliersInternal>
+                <dependency Id="474216bf-1bca-425c-8a4e-c53910ad6c88">
+                  <enumerationMoniker Id="fb9fbec7-1776-4f7d-a21c-224f84bb2852" LastKnownName="GateEnum" />
+                  <elementDefinition Id="f53761d2-64d1-4631-bbf1-e5a1c0865afd" />
+                </dependency>
+              </suppliersInternal>
               <ownedAttributes>
                 <property Id="74362cf6-df0a-4ae6-a4ba-8e33dc24bab5" name="Edges" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="5369d353-f21c-4c2d-a9e0-e635e3dfa8da" />
@@ -285,6 +277,27 @@
               </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="248a4303-8a83-45ff-a12c-75200a5fbcbd" name="GateFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="8da7516e-2fa8-4cc7-9d79-17be0c26469c" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="fb9fbec7-1776-4f7d-a21c-224f84bb2852" name="GateEnum" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="93d141de-3fea-4a88-9284-cd39ce727f7d" />
+              <ownedLiterals>
+                <enumerationLiteral Id="9d13a5d5-9501-423c-b7f5-950e82ad118b" name="Or">
+                  <elementDefinition Id="8227a75c-a06e-4e39-a71a-c3815950432f" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="41e789c2-53e9-41ac-80fa-f63da2aa05bd" name="And">
+                  <elementDefinition Id="322aaf31-16ba-438a-b11d-6d29eed687da" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="a9327219-aeca-4a1a-a731-176ce1aa6eff" name="Not">
+                  <elementDefinition Id="0ce772fa-3450-4ac6-9f24-c914451ecd8b" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -305,6 +318,11 @@
           <packageHasNamedElement>
             <class Id="fc1077dc-f681-4aea-8dff-6d15d039b540" name="FileParser" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="364b54e4-2386-4dba-a405-6805f5a0d571" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="3f11f228-2e9d-4c6b-939a-2d31a4c1e600" name="CircuitBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="a7ecbddc-ed55-4c03-b080-90b50eefcb08" />
             </class>
           </packageHasNamedElement>
         </packagedElements>
@@ -343,5 +361,19 @@
   </packagedElements>
   <package Id="af6e25b8-538e-4ba0-aee9-ec8070d13249" name="DP1-ModelingProject">
     <elementDefinition Id="2033e480-4241-481b-965f-d38de3e0e7ce" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a4fb4f96-527f-4d70-b094-72d6ea9d196e">
+        <profileInstance Id="98789c46-52b9-4ddf-9356-0f520e236180" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2d43ebae-ddc5-493b-9e2a-0f5143801366">
+        <profileInstance Id="cab88ee9-d3af-4e34-b69a-265e94ffa7fa" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

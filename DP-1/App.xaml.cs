@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using DP_1.View;
 using DP_1.Model.Gates;
+using DP_1.Model;
 
 namespace DP_1
 {
@@ -20,8 +21,8 @@ namespace DP_1
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
 
-            GateFactory.createGate(GateEnum.AND);
-            GateFactory.createGate(GateEnum.NOT);
+
+            Simulator s = new Simulator();
         }
     }
 }
