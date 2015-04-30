@@ -8,37 +8,18 @@ namespace DP_1.Model
 {
     public class ANDGate : Gate
     {
-        public bool A { get; set; }
-
-
-        public bool B { get; set; }
-
-        public void compute()
+        public override bool result()
         {
-            throw new NotImplementedException();
-        }
-
-        public bool result()
-        {
+            bool result = false;
             if (A && B)
             {
-                return true;
+                result = true;
             }
-            return false;
 
-        }
+            pipelineResult(result);
 
-        public ANDGate()
-        {
-            Console.WriteLine("AND gate created");
-        }
+            return result;
 
-
-        public List<Gate> Edges { get; set; }
-
-        public void addEdge(Gate g)
-        {
-            throw new NotImplementedException();
         }
     }
 }

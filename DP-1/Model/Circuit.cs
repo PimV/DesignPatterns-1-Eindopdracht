@@ -35,6 +35,7 @@ namespace DP_1.Model
             Gate gate = GateFactory.createGate(type);
             gate.A = A;
             gate.B = B;
+            gate.Count = 0;
             gate.Edges = new List<Gate>();
             return gate;
         }

@@ -72,6 +72,14 @@ namespace DP_1.Model
 
             this.Circuit.linkGate(g11, s);
 
+
+            int count = 0;
+            foreach (Gate g in gates)
+            {
+                count++;
+                Console.WriteLine("NODE: " + count + " " + g);
+            }
+
         }
     }
 }

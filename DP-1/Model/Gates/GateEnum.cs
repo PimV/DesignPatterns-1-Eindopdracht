@@ -8,8 +8,6 @@ namespace DP_1.Model.Gates
 {
     public enum GateEnum
     {
-        [GateInfo(typeof(StartGate))]
-        START,
         [GateInfo(typeof(ANDGate))]
         AND,
         [GateInfo(typeof(NOTGate))]

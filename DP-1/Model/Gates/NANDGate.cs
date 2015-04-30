@@ -8,17 +8,8 @@ namespace DP_1.Model
 {
     public class NANDGate : Gate
     {
-        public bool A { get; set; }
 
-
-        public bool B { get; set; }
-
-        public void compute()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool result()
+        public override bool result()
         {
             if (A && B)
             {
@@ -26,14 +17,6 @@ namespace DP_1.Model
             }
 
             return true;
-        }
-
-
-        public List<Gate> Edges { get; set; }
-
-        public void addEdge(Gate g)
-        {
-            throw new NotImplementedException();
         }
     }
 }

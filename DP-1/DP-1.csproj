@@ -75,7 +75,6 @@
     <Compile Include="Model\Gates\NORGate.cs" />
     <Compile Include="Model\Gates\NOTGate.cs" />
     <Compile Include="Model\Gates\ORGate.cs" />
-    <Compile Include="Model\Gates\StartGate.cs" />
     <Compile Include="Model\Gates\XORGate.cs" />
     <Compile Include="Model\Simulator.cs" />
     <Compile Include="Services\Extensions.cs" />
