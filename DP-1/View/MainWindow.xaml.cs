@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DP_1.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace DP_1.View
         public MainWindow()
         {
             InitializeComponent();
+            FileParser parser = new FileParser();
         }
     }
 }

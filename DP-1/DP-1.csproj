@@ -64,6 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Enums\Class1.cs" />
     <Compile Include="Model\Circuit.cs" />
     <Compile Include="Model\Edge.cs" />
     <Compile Include="Model\Gates\ANDGate.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Model\Gates\XORGate.cs" />
     <Compile Include="Model\Simulator.cs" />
     <Compile Include="Services\Extensions.cs" />
+    <Compile Include="Services\FileParser.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

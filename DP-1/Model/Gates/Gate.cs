@@ -8,10 +8,18 @@ namespace DP_1.Model
 {
     public abstract class Gate
     {
+        public string Name { get; set; }
         public bool A { get; set; }
         public bool B { get; set; }
         public int Count { get; set; }
         public List<Gate> Edges { get; set; }
+
+        public Gate() { }
+
+        public Gate(string name)
+        {
+            Name = name;
+        }
 
         public void addInput(bool input)
         {
