@@ -75,9 +75,9 @@ namespace DP_1.Services
             return enums;
         }
 
-        public List<IOEnums> ParseInputs(List<string> inputStrings)
-        {
-                      
-        }
+        //public List<IOEnums> ParseInputs(List<string> inputStrings)
+        //{
+        //    return null;
+        //}
     }
 }

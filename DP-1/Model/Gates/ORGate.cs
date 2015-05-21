@@ -11,11 +11,16 @@ namespace DP_1.Model
 
         public override bool result()
         {
+            bool result = true;
+
             if (!A && !B)
             {
-                return false;
+                result = false;
             }
-            return true;
+
+            pipelineResult(result);
+
+            return result;
         }
 
     }
