@@ -1,4 +1,5 @@
 ﻿using DP_1.Model.Gates;
+using DP_1.Model.Probes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,11 +31,21 @@ namespace DP_1.Model
             to.Edges.Add(from);
         }
 
-        public Gate createGate(bool A, bool B, GateEnum type)
+        public void linkProbe(Gate from, Probe to)
+        {
+            to.Gate = from;
+        }
+
+        public void linkInput(bool signal, Gate to)
+        {
+            to.addInput(signal);
+        }
+
+        public Gate createGate(GateEnum type)
         {
             Gate gate = GateFactory.createGate(type);
-            gate.A = A;
-            gate.B = B;
+            //gate.A = false;
+            //gate.B = false;
             gate.Count = 0;
             gate.Edges = new List<Gate>();
             return gate;
