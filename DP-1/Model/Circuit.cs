@@ -10,7 +10,7 @@ namespace DP_1.Model
 {
     public class Circuit
     {
-
+        public List<Probe> Outputs { get; set; }
         public List<Gate> Gates { get; set; }
         public Gate Root { get; set; }
         public Gate Cin { get; set; }

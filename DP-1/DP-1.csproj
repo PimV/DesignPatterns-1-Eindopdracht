@@ -64,21 +64,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Enums\Class1.cs" />
     <Compile Include="Model\Circuit.cs" />
     <Compile Include="Model\Edge.cs" />
     <Compile Include="Model\Gates\ANDGate.cs" />
     <Compile Include="Model\Gates\Gate.cs" />
     <Compile Include="Model\Gates\GateFactory.cs" />
     <Compile Include="Model\Gates\GateInfoAttribute.cs" />
-    <Compile Include="Model\Gates\GateEnum.cs" />
+    <Compile Include="Enums\GateEnum.cs" />
     <Compile Include="Model\Gates\NANDGate.cs" />
     <Compile Include="Model\Gates\NORGate.cs" />
     <Compile Include="Model\Gates\NOTGate.cs" />
     <Compile Include="Model\Gates\ORGate.cs" />
     <Compile Include="Model\Gates\XORGate.cs" />
     <Compile Include="Model\Probes\Probe.cs" />
-    <Compile Include="Model\Simulator.cs" />
+    <Compile Include="Controller\Simulator.cs" />
     <Compile Include="Services\Extensions.cs" />
     <Compile Include="Services\FileParser.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
@@ -114,7 +113,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
