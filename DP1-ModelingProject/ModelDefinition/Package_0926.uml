@@ -75,6 +75,62 @@
                 LastKnownLocation="Package_0925.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="7539b7f4-efe8-4693-9a18-731dd1c8aae1"
+            name="inputs"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="595f5fba-ee6d-43d0-84d1-fc23c6e50a07"
+                LastKnownName="Dictionary&lt;string, bool&gt;"
+                LastKnownLocation="Package_0926.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="20615f32-e2e4-486d-87fa-026844a48628"
+            name="outputs"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0c8643b0-5c2a-4460-a982-f971e18e0c3e"
+                LastKnownName="List&lt;Probe&gt;"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bf787fa9-b85b-439f-b78f-181a20320ba3"
+            name="Circuit"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="951d410e-6079-4732-a021-4a1fc553b026"
+                LastKnownName="Circuit"
+                LastKnownLocation="Package_0926.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -108,6 +164,108 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="eb486ab1-90db-4a27-867e-95c2f29d8058"
+            name="readLinkSet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d7d8cf26-5aff-4632-8a63-ce5613bc7362"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="256e1bcf-7c77-48e4-8ce1-be0f2809fa35"
+                  name="Dictionary&lt;string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4af15537-9e1c-474a-88ab-f235e80ef251"
+                  name="List&lt;string&gt;&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d50974e8-bbb5-41d1-a4f7-347774bfe85d"
+            name="readNodeSet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a53aefcd-13a2-4ab9-aa17-7140a9a40f5a"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="221a51a3-4219-4cd7-8a50-6159c4dad05b"
+                  name="Dictionary&lt;string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4422c144-c545-4c0a-8a4f-30b3e9754aee"
+                  name="List&lt;string&gt;&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d5873bea-c8b3-4bd1-8282-dbe7c04a8158"
+            name="ParseOutputs"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8e4d0ad8-fd47-4caf-9042-5a550ca323c7"
+                  name="List&lt;string&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d6092ebf-eb7e-46b9-92b8-e3e804417a4d"
+            name="ParseInputs"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="18e93d85-513e-4ae9-b529-b5d330eef1a5"
+                  name="List&lt;string&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -123,6 +281,16 @@
       <undefinedType
         Id="34a603c1-c136-4f0a-ac93-fa8dda10e962"
         name="string[]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="595f5fba-ee6d-43d0-84d1-fc23c6e50a07"
+        name="Dictionary&lt;string, bool&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="951d410e-6079-4732-a021-4a1fc553b026"
+        name="Circuit" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

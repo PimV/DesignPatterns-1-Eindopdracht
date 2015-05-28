@@ -648,6 +648,24 @@
                     <referencedTypeMoniker Id="e26356f1-5546-4f8d-8913-cb760b0d78a1" LastKnownName="List&lt;Gate&gt;" />
                   </type_NamedElement>
                 </property>
+                <property Id="a9d02130-5b81-4156-8ee7-6b11847e56e9" name="inputs" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7539b7f4-efe8-4693-9a18-731dd1c8aae1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b3e5cb87-cc24-4bc8-9042-5a3ed8349932" LastKnownName="Dictionary&lt;string, bool&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="b78ddb3b-44e3-4585-8c0b-8f27e6029dfe" name="outputs" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="20615f32-e2e4-486d-87fa-026844a48628" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="68e81aa5-3b00-4428-bdc2-a2062548e800" LastKnownName="List&lt;Probe&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="f967f6d8-eec6-4d5c-a221-d2f759130efc" name="Circuit" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bf787fa9-b85b-439f-b78f-181a20320ba3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ebe72854-45cb-40e4-873e-6687920ee931" LastKnownName="Circuit" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="51de2237-d982-43e6-9579-146382d3f031" name="ParseGates" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -664,6 +682,66 @@
                         <type_NamedElement>
                           <referencedTypeMoniker Id="e26356f1-5546-4f8d-8913-cb760b0d78a1" LastKnownName="List&lt;Gate&gt;" />
                         </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="94908d84-f129-4314-b978-fcb17711e7f5" name="readLinkSet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="eb486ab1-90db-4a27-867e-95c2f29d8058" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1f1342bf-e637-412c-aa82-ce249029ecaf" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="d7d8cf26-5aff-4632-8a63-ce5613bc7362" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="70d0d983-e19a-40fe-9324-32c5efa3315a" name="Dictionary&lt;string" direction="In" isUnique="false">
+                        <elementDefinition Id="256e1bcf-7c77-48e4-8ce1-be0f2809fa35" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="64ee3a8f-d9f4-45ad-994e-bd8e5aa07ba4" name="List&lt;string&gt;&gt;" direction="In" isUnique="false">
+                        <elementDefinition Id="4af15537-9e1c-474a-88ab-f235e80ef251" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="42745a8a-a097-411b-aa6b-36bd7e128dff" name="readNodeSet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d50974e8-bbb5-41d1-a4f7-347774bfe85d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="73bc5ebc-04d5-49f3-9901-b81366d55470" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="a53aefcd-13a2-4ab9-aa17-7140a9a40f5a" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1eacdb9e-0ccb-418e-b95f-e537130f50ce" name="Dictionary&lt;string" direction="In" isUnique="false">
+                        <elementDefinition Id="221a51a3-4219-4cd7-8a50-6159c4dad05b" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="eca24631-99e8-4f12-9676-64a662d68126" name="List&lt;string&gt;&gt;" direction="In" isUnique="false">
+                        <elementDefinition Id="4422c144-c545-4c0a-8a4f-30b3e9754aee" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="ac067c97-cd57-4a04-b28a-40c59d2345db" name="ParseOutputs" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d5873bea-c8b3-4bd1-8282-dbe7c04a8158" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7262e4fe-0a43-41d0-bd09-3a484cab427d" name="List&lt;string&gt;" direction="In" isUnique="false">
+                        <elementDefinition Id="8e4d0ad8-fd47-4caf-9042-5a550ca323c7" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="1e5d5685-4ee6-448d-a47e-c70b8170cbf1" name="ParseInputs" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d6092ebf-eb7e-46b9-92b8-e3e804417a4d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="de260214-9d3c-4cce-b159-0aec41845300" name="List&lt;string&gt;" direction="In" isUnique="false">
+                        <elementDefinition Id="18e93d85-513e-4ae9-b529-b5d330eef1a5" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -737,6 +815,16 @@
     <packageHasNamedElement>
       <referencedType Id="15771df2-ac11-40ea-af79-65d20be49b65" name="string[]" isAbstract="false" isLeaf="false" cachedFullName="string[]">
         <elementDefinition Id="34a603c1-c136-4f0a-ac93-fa8dda10e962" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b3e5cb87-cc24-4bc8-9042-5a3ed8349932" name="Dictionary&lt;string, bool&gt;" isAbstract="false" isLeaf="false" cachedFullName="Dictionary&lt;string, bool&gt;">
+        <elementDefinition Id="595f5fba-ee6d-43d0-84d1-fc23c6e50a07" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ebe72854-45cb-40e4-873e-6687920ee931" name="Circuit" isAbstract="false" isLeaf="false" cachedFullName="Circuit">
+        <elementDefinition Id="951d410e-6079-4732-a021-4a1fc553b026" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
