@@ -49,9 +49,6 @@ namespace DP_1.Model
             Gate g10 = this.Circuit.createGate(GateEnum.AND);
             Gate g11 = this.Circuit.createGate(GateEnum.OR);
 
-            //Gate cout = this.Circuit.createGate(false, false, GateEnum.);
-            // Gate s = this.Circuit.createGate(false, false, GateEnum.OR);
-
             List<Gate> gates = new List<Gate>() 
             { 
                 g1, 
