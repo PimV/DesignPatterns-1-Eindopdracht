@@ -585,24 +585,6 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="3b35acc1-2f13-4cc9-8b48-1162025546e1"
-            name="addGate"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7f6a5354-c08f-42da-9caf-c6da30765c0b"
-                  name="Gate"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="bb47f14b-bdcc-4632-b22d-5dfad2179df5"
             name="linkGate"
             isLeaf="false"

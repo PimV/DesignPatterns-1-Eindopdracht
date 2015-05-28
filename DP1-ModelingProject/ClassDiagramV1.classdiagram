@@ -143,16 +143,6 @@
                 </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
-                <operation Id="1ab3d2c3-62ce-4a8a-8008-4995895d26e9" name="addGate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="3b35acc1-2f13-4cc9-8b48-1162025546e1" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="3e5a95ed-41d9-4afb-835b-bff26db74993" name="Gate" direction="In" isUnique="false">
-                        <elementDefinition Id="7f6a5354-c08f-42da-9caf-c6da30765c0b" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
                 <operation Id="9ba67913-3a9d-47c2-b5bd-8b56a855251c" name="linkGate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="bb47f14b-bdcc-4632-b22d-5dfad2179df5" />
                   <ownedParameters>
@@ -217,25 +207,6 @@
                   </ownedParameters>
                 </operation>
               </ownedOperationsInternal>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="732be0d0-e4f4-4b3a-b061-5c8200267684" name="Edge" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="f3335c76-459d-4223-ac05-5721b87fe0ba" />
-              <ownedAttributesInternal>
-                <property Id="05421070-ba59-44f8-8120-9ab4d1afcb8f" name="Parent" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="a8cd0738-1d53-418b-9077-99e60f311a0a" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="c2cb8960-155d-4b64-b22d-5265e2f3dc66" LastKnownName="Gate" />
-                  </type_NamedElement>
-                </property>
-                <property Id="8034532b-3be1-4813-b6d0-a804b2f2e237" name="Child" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="20d899dc-2f94-434f-b6c4-00074ee22f77" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="aa6e01f1-30be-408e-a905-4aa01f40856b" LastKnownName="Gate" />
-                  </type_NamedElement>
-                </property>
-              </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -368,34 +339,6 @@
                 </stereotypeInstance>
               </appliedStereotypesInternal>
               <elementDefinition Id="b328b02f-8201-4183-92d2-61906c631762" />
-              <targetEnds>
-                <association Id="cff379bc-c2de-474e-b160-fb2c437a5218" isDerived="false" sourceEndRoleName="Gate" targetEndRoleName="Edge" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="732be0d0-e4f4-4b3a-b061-5c8200267684" LastKnownName="Edge" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="b87e8243-73f4-4b5c-8479-e1e03022aa75" name="Gate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="f314c990-cdd2-424b-9562-bb418b45f172" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="2fc1241d-392d-4103-b621-4a79ce038cf3" name="Edge" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <lowerValueInternal>
-                          <literalString Id="ffdd7cb8-a34e-40cf-b108-efe33d9015a6" name="Lower" value="*">
-                            <elementDefinition Id="2a258aac-a3a6-404e-89a1-49c64db7d925" />
-                          </literalString>
-                        </lowerValueInternal>
-                        <upperValueInternal>
-                          <literalString Id="13ac0334-f33a-499a-9dbd-b62bda843327" name="Upper" value="*">
-                            <elementDefinition Id="0776671f-922b-460b-a975-62390080e541" />
-                          </literalString>
-                        </upperValueInternal>
-                        <elementDefinition Id="494c274e-8b1f-4bad-82d3-ea36f3884294" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="b27ca485-1c5a-4349-a4ed-6d280eb876cd" />
-                </association>
-              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="c03b1873-63a1-45da-8293-e914f1999fd5" name="A" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="50a0f3ba-077e-4f82-9da9-774ef164648b" />
@@ -764,11 +707,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <referencedType Id="aa6e01f1-30be-408e-a905-4aa01f40856b" name="Gate" isAbstract="false" isLeaf="false" cachedFullName="DP1-ModelingProject::t::Gate">
-        <elementDefinition Id="da4cb588-86d0-4f7d-9448-518bc91bceb6" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="c2cb8960-155d-4b64-b22d-5265e2f3dc66" name="Gate" isAbstract="false" isLeaf="false" cachedFullName="DP1-ModelingProject::t::Gate">
         <elementDefinition Id="da4cb588-86d0-4f7d-9448-518bc91bceb6" />
       </referencedType>
     </packageHasNamedElement>
