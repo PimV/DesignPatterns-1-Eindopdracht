@@ -13,6 +13,8 @@ namespace DP_1.Model
         public bool A { get; set; }
         public bool B { get; set; }
         public bool Cin { get; set; }
+
+        public List<Probe> Outputs { get; set; }
         public List<Gate> Gates { get; set; }
 
         public Circuit()

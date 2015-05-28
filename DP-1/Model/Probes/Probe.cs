@@ -10,6 +10,8 @@ namespace DP_1.Model.Probes
     {
         public Gate Gate { get; set; }
 
+        public string Name { get; set; }
+
         public bool Result
         {
             get
@@ -17,6 +19,11 @@ namespace DP_1.Model.Probes
                 return Gate.result();
             }
         }
+        public override string ToString()
+        {
+            return this.Name + "\t" + this.Result;
+        }
+
 
     }
 }

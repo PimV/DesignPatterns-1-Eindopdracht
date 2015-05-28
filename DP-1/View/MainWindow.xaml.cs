@@ -24,7 +24,7 @@ namespace DP_1.View
         public MainWindow()
         {
             InitializeComponent();
-            FileParser parser = new FileParser();
+
         }
     }
 }

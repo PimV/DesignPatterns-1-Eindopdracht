@@ -61,7 +61,7 @@ namespace DP_1.Model
 
         public override string ToString()
         {
-            return "A: " + A + " \t\t B: " + B + " \t\t RESULT: " + result();
+            return this.Name + "\tA: " + A + " \t\t B: " + B + " \t\t RESULT: " + result();
         }
     }
 }

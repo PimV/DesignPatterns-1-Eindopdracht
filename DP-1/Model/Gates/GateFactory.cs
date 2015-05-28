@@ -35,5 +35,19 @@ namespace DP_1.Model.Gates
             result.B = B;
             return result;
         }
+        public static Gate createGate(GateEnum gate, String name)
+        {
+            var gateAttribute = gate.GetAttribute<GateInfo>();
+            if (gateAttribute == null)
+            {
+                return null;
+            }
+            var type = gateAttribute.Type;
+            Gate result = Activator.CreateInstance(type) as Gate;
+            result.Name = name;
+            result.Edges = new List<Gate>();
+
+            return result;
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Windows;
 using DP_1.View;
 using DP_1.Model.Gates;
 using DP_1.Model;
+using DP_1.Services;
 
 namespace DP_1
 {
@@ -19,10 +20,14 @@ namespace DP_1
         public App()
         {
             MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            //mainWindow.Show();
 
-
+            FileParser parser = new FileParser();
+           
             Simulator s = new Simulator();
+            s.Circuit = parser.Circuit;
+            s.simulate();
+          
         }
     }
 }
