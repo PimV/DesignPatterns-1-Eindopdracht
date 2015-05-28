@@ -13,8 +13,6 @@ namespace DP_1.Model.Gates
         [GateInfo(typeof(NOTGate))]
         NOT,
         [GateInfo(typeof(ORGate))]
-        OR,
-        [GateInfo(typeof(XORGate))]
-        XOR
+        OR
     }
 }

@@ -10,15 +10,14 @@ namespace DP_1.Model
 {
     public class Circuit
     {
-
+        public bool A { get; set; }
+        public bool B { get; set; }
+        public bool Cin { get; set; }
         public List<Gate> Gates { get; set; }
-        public Gate Root { get; set; }
-        public Gate Cin { get; set; }
 
         public Circuit()
         {
             this.Gates = new List<Gate>();
-            this.Root = null;
         }
 
         public void addGate(Gate gate)
@@ -44,15 +43,7 @@ namespace DP_1.Model
         public Gate createGate(GateEnum type)
         {
             Gate gate = GateFactory.createGate(type);
-            //gate.A = false;
-            //gate.B = false;
-            gate.Count = 0;
-            gate.Edges = new List<Gate>();
             return gate;
         }
-
-
-
-
     }
 }

@@ -111,5 +111,10 @@ namespace DP_1.Model
             Console.WriteLine("COut: " + cout.Result);
 
         }
+
+        public void Simulate()
+        {
+            
+        }
     }
 }

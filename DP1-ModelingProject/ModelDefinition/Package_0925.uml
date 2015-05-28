@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="88742630-6bde-4eac-9ffc-389299765d1e"
-  name="t" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  name="Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <packagedElements>
     <packageHasNamedElement>
       <Interface
@@ -33,8 +33,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="fa447cd5-d826-4b8e-8f3a-71498ca52ce5"
-                LastKnownName="List&lt;Edge&gt;"
+                Id="96dc7e0e-b6d9-4bea-aa1a-233bddbe294a"
+                LastKnownName="List&lt;Gate&gt;"
                 LastKnownLocation="Package_0925.uml" />
             </type_NamedElement>
           </property>
@@ -92,6 +92,42 @@
                 LastKnownLocation="DP1-ModelingProject.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="5c76d544-6616-49e6-a5b9-3b0e24163faa"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ed7cb3b0-99d1-4f6c-a6af-813da5e00788"
+                LastKnownName="string"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8ff1f512-49a2-4c8e-a177-02e4bc14716e"
+            name="Count"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="025884f4-29ee-4f50-8b5d-2462d05eb424"
+                LastKnownName="int"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributes>
         <ownedOperations>
           <operation
@@ -128,16 +164,15 @@
               LastKnownName="Gate"
               LastKnownLocation="Package_0925.uml" />
           </interfaceRealization>
+          <dependency
+            Id="6f65d7be-0961-4b95-8bec-2167852550e7">
+            <classMoniker
+              Id="b328b02f-8201-4183-92d2-61906c631762"
+              LastKnownName="Gate"
+              LastKnownLocation="Package_0925.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation
-            Id="79ec4008-c09a-4db0-84c0-e5198fa5c0a4"
-            name="compute"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
           <operation
             Id="80d9f7d9-f85c-420b-bb7a-fa1fcca5f357"
             name="result"
@@ -164,16 +199,15 @@
               LastKnownName="Gate"
               LastKnownLocation="Package_0925.uml" />
           </interfaceRealization>
+          <dependency
+            Id="5a557847-51ff-47e7-b4eb-588052f62143">
+            <classMoniker
+              Id="b328b02f-8201-4183-92d2-61906c631762"
+              LastKnownName="Gate"
+              LastKnownLocation="Package_0925.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation
-            Id="59cfca9f-e7e9-460a-931f-98a90e479174"
-            name="compute"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
           <operation
             Id="9eb01b09-6a75-4a42-9faa-5b07ce84b62d"
             name="result"
@@ -272,16 +306,15 @@
               LastKnownName="Gate"
               LastKnownLocation="Package_0925.uml" />
           </interfaceRealization>
+          <dependency
+            Id="fbd8c7dd-fa4e-4bee-b8d0-21718a0d538c">
+            <classMoniker
+              Id="b328b02f-8201-4183-92d2-61906c631762"
+              LastKnownName="Gate"
+              LastKnownLocation="Package_0925.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedOperationsInternal>
-          <operation
-            Id="949278a9-8864-4b8e-aede-031a9e475806"
-            name="compute"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
           <operation
             Id="39bb6380-450a-45ba-ae4d-3cccf876bce6"
             name="result"
@@ -353,7 +386,329 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="e263b39c-0066-418d-b7d1-017efe65f038"
+            isDerived="false"
+            sourceEndRoleName="Circuit"
+            targetEndRoleName="Gate"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b328b02f-8201-4183-92d2-61906c631762"
+              LastKnownName="Gate"
+              LastKnownLocation="Package_0925.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a6cef2e-a74c-4394-8191-f6e3db19930b"
+                  name="Circuit"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a693e3a-5563-430c-895b-380a98d6ecb6"
+                  name="Gate"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="907b5c6e-534f-4e2e-a238-ffd769af29df"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e383c6a1-109d-42b3-a01c-26e93de65a0e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="288d1bb0-bdcf-4f69-b984-e7548b504da6"
+            isDerived="false"
+            sourceEndRoleName="Circuit"
+            targetEndRoleName="GateFactory"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8da7516e-2fa8-4cc7-9d79-17be0c26469c"
+              LastKnownName="GateFactory"
+              LastKnownLocation="Package_0925.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a9965882-597f-4d7a-b7f7-c151e6549d87"
+                  name="Circuit"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b0e96e29-9f12-4474-855e-ac0a993890d3"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="265fe2b2-8457-4ae4-872b-6aa8d68c7cc3"
+                      name="Upper"
+                      value="0" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="39153db5-b463-454a-8fd5-7bd71e6d07f9"
+                  name="GateFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="fe6e72c1-8922-432a-ae75-ae43e67794ef"
+            name="A"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="DP1-ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d218492c-1b11-486d-beec-af3884513c96"
+            name="B"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="DP1-ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="668e294a-1f0e-41a0-8c49-60acadde89c2"
+            name="Cin"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="DP1-ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cae64d71-0ccf-47c5-b38f-01e5544cf571"
+            name="Gates"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="96dc7e0e-b6d9-4bea-aa1a-233bddbe294a"
+                LastKnownName="List&lt;Gate&gt;"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="34edcfce-046e-444e-88b1-6f20cc10b965"
+            name="Probes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0c8643b0-5c2a-4460-a982-f971e18e0c3e"
+                LastKnownName="List&lt;Probe&gt;"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3b35acc1-2f13-4cc9-8b48-1162025546e1"
+            name="addGate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7f6a5354-c08f-42da-9caf-c6da30765c0b"
+                  name="Gate"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bb47f14b-bdcc-4632-b22d-5dfad2179df5"
+            name="linkGate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bbe5fee3-c7ea-4596-8e4f-f21639975023"
+                  name="Gate"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cc98718f-f0f6-4f19-8943-eec0ad20738d"
+                  name="Gate"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e2768af4-1ea7-4a51-bd02-b0401bd39553"
+            name="linkProbe"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fde799d1-4dcd-461d-94b6-61037ddcf194"
+                  name="Gate"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2b49003e-72b9-4f7b-b409-28073b15f056"
+                  name="Probe"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ff24bd6a-7b77-412a-b70c-c79f22bdfe1d"
+            name="linkInput"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2a6b83e2-466b-4f33-a4ef-8e2bb722b82d"
+                  name="Boolean"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2f003062-dfb9-4e10-924f-768b5dcd2b74"
+                  name="Gate"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5951caf3-fb29-485b-b323-4dce8a142097"
+            name="createGate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1310c3e5-9c78-4c47-8249-8ee15371db8c"
+                  name="GateEnum"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="000f8223-642c-42fc-836d-b6927cf36fe7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="da4cb588-86d0-4f7d-9448-518bc91bceb6"
+                      LastKnownName="Gate"
+                      LastKnownLocation="Package_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -390,56 +745,6 @@
             concurrency="Sequential"
             isQuery="false" />
         </ownedOperationsInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="f7c99398-f5bf-4270-a2ff-bfb07b2cbee2"
-        name="Simulator"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="722bd776-d39d-4a86-87ea-b54f67a87b24"
-            isDerived="false"
-            sourceEndRoleName="Simulator"
-            targetEndRoleName="Circuit"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="89718c35-749b-4421-85f4-49b63fd28599"
-              LastKnownName="Circuit"
-              LastKnownLocation="Package_0925.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="3be695b7-4f56-4367-94ba-d319d1d5494b"
-                  name="Simulator"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8a987238-d3a3-4cac-b20b-474c0a3cd137"
-                  name="Circuit"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -567,7 +872,140 @@
         name="GateFactory"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="e813d15b-31bd-495d-9ef7-40170a549ad1"
+            isDerived="false"
+            sourceEndRoleName="GateFactory"
+            targetEndRoleName="Extensions"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="76c1fcde-2a3c-43a1-99c1-59b937715ce7"
+              LastKnownName="Extensions"
+              LastKnownLocation="Package_0925.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="64c4b5ac-3ebb-489a-8878-a701f5d84c53"
+                  name="GateFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f0c615e0-70a9-4a01-8994-4af875316e02"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="db2141f6-8757-4898-ab4e-939e50c35b5b"
+                      name="Upper"
+                      value="0" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="75e5ec10-0f94-4487-99ed-331bce5f688c"
+                  name="Extensions"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="dc83fecf-3372-4c62-a32c-47a6f3275091"
+            name="createGate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="05eba691-a078-4b6a-a7bc-6db4a20e8861"
+                  name="GateEnum"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="74b9f33d-d461-469a-9240-671a21aa2666"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="da4cb588-86d0-4f7d-9448-518bc91bceb6"
+                      LastKnownName="Gate"
+                      LastKnownLocation="Package_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8497b0ce-51c5-4263-a4ba-9c6ca8b334ff"
+            name="createGate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1daf5ebe-d208-4a2c-baa4-e858b8247099"
+                  name="GateEnum"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6e79a192-b427-43b6-9018-974dc0c1ced5"
+                  name="Boolean"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a84e6387-04e4-4e88-9e09-8eddd4ec7f4e"
+                  name="Boolean"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f2dcc055-783e-419d-a0fe-deb5056b65fc"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="da4cb588-86d0-4f7d-9448-518bc91bceb6"
+                      LastKnownName="Gate"
+                      LastKnownLocation="Package_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <enumeration
@@ -575,6 +1013,15 @@
         name="GateEnum"
         isAbstract="false"
         isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="ef73dab4-8386-485e-b49f-b3b38cd05343">
+            <classMoniker
+              Id="7809171c-3f9b-42e4-86da-d30239fdd23b"
+              LastKnownName="GateInfo"
+              LastKnownLocation="Package_0925.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedLiterals>
           <enumerationLiteral
             Id="8227a75c-a06e-4e39-a71a-c3815950432f"
@@ -587,6 +1034,528 @@
             name="Not" />
         </ownedLiterals>
       </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7809171c-3f9b-42e4-86da-d30239fdd23b"
+        name="GateInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="e948c1ed-e8cc-4bc4-8050-8d0d326fca8b"
+            name="type"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a873fca1-3684-4a9d-a30e-88d88440af73"
+                LastKnownName="Type"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="eda4071f-ded7-44d1-be2d-da3fc94e185a"
+            name="Type"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a873fca1-3684-4a9d-a30e-88d88440af73"
+                LastKnownName="Type"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a873fca1-3684-4a9d-a30e-88d88440af73"
+        name="Type" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ed7cb3b0-99d1-4f6c-a6af-813da5e00788"
+        name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0d6374ea-77d8-4852-a2c1-53f92204595c"
+        name="Count" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="96dc7e0e-b6d9-4bea-aa1a-233bddbe294a"
+        name="List&lt;Gate&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="025884f4-29ee-4f50-8b5d-2462d05eb424"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b328b02f-8201-4183-92d2-61906c631762"
+        name="Gate"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9f5cb092-cd1d-49ba-8a69-b42cfae6818a"
+            name="specification"
+            profile="StandardProfileL2" />
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="b27ca485-1c5a-4349-a4ed-6d280eb876cd"
+            isDerived="false"
+            sourceEndRoleName="Gate"
+            targetEndRoleName="Edge"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f3335c76-459d-4223-ac05-5721b87fe0ba"
+              LastKnownName="Edge"
+              LastKnownLocation="Package_0925.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f314c990-cdd2-424b-9562-bb418b45f172"
+                  name="Gate"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="494c274e-8b1f-4bad-82d3-ea36f3884294"
+                  name="Edge"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2a258aac-a3a6-404e-89a1-49c64db7d925"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0776671f-922b-460b-a975-62390080e541"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="50a0f3ba-077e-4f82-9da9-774ef164648b"
+            name="A"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="DP1-ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a94b6f86-0696-4844-b7b1-82a972739752"
+            name="B"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="DP1-ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="58fe2689-3239-42ad-af13-7163e433ede5"
+            name="Count"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="025884f4-29ee-4f50-8b5d-2462d05eb424"
+                LastKnownName="int"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1f6229c5-9c26-4fbf-be5b-0eb803371c67"
+            name="Edges"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="96dc7e0e-b6d9-4bea-aa1a-233bddbe294a"
+                LastKnownName="List&lt;Gate&gt;"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f32c54df-c735-4efc-89d1-6b2c3dc62a67"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="DP1-ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c01bc233-1bc8-4e81-a6e1-5f61309d24fa"
+            name="Result"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="DP1-ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1922c136-e13f-423e-ac98-fb012dfa8876"
+            name="addInput"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b29db24c-605b-4ad6-aa83-2b7925cf46a8"
+                  name="Boolean"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5805b923-8587-4fd2-854b-0a353d7ab3b8"
+            name="compute"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="73634380-8ee4-4678-8d7c-e318dccbc659"
+            name="pipelineResult"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3b54ae29-a9cb-4ad5-a996-029a456cb38c"
+                  name="Boolean"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3bbe874f-5922-4335-a482-379e713fa669"
+            name="result"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2ee63e01-5842-4742-aafc-617a0e3ea1ce"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="DP1-ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2287493c-a0a7-4601-bc64-25a650cc7ec6"
+            name="ToString"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6562ffcd-8b71-49a4-af85-da645a6f7bb7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="DP1-ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b74cf658-878a-40ad-a9ab-db2b744b6b46"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d53e6e63-d6a1-4d95-a51c-942076badde4"
+        name="Probe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="46cbe096-82e6-4cb4-b358-84b5493c2bed"
+            isDerived="false"
+            sourceEndRoleName="Probe"
+            targetEndRoleName="Gate"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b328b02f-8201-4183-92d2-61906c631762"
+              LastKnownName="Gate"
+              LastKnownLocation="Package_0925.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e2245d6b-88bd-42b9-88e7-e823990da0ba"
+                  name="Probe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="522b11a4-968f-4cdf-97d6-b5dac2834b38"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5297ecbd-1a7e-4e32-acac-9c9bb2da81af"
+                      name="Upper"
+                      value="0" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6c902e68-df46-4c26-bc13-ba3bc4b51e64"
+                  name="Gate"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="24fb018d-66d5-45d3-859a-8d1b5904bfcb"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="DP1-ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fa524f98-3484-4723-957f-5330d8618fa5"
+            name="Gate"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="da4cb588-86d0-4f7d-9448-518bc91bceb6"
+                LastKnownName="Gate"
+                LastKnownLocation="Package_0925.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9b6e9080-1685-443c-84e5-62c62f72b23c"
+            name="Result"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="DP1-ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0c8643b0-5c2a-4460-a982-f971e18e0c3e"
+        name="List&lt;Probe&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="76c1fcde-2a3c-43a1-99c1-59b937715ce7"
+        name="Extensions"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="e1f74ad8-f71f-4b59-9b0d-3a9799bbc2fd"
+            name="GetAttribute&lt;T&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4f5a4620-bf9e-45f4-b204-dbcefc9f424e"
+                  name="Enum"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="30cacf63-46aa-4904-877a-57b4ceae8a84"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="bab706f5-32af-4d54-b6d4-a3d5dc66b936"
+                      LastKnownName="T"
+                      LastKnownLocation="Package_0925.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="bab706f5-32af-4d54-b6d4-a3d5dc66b936"
+        name="T" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

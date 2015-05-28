@@ -14,11 +14,17 @@ namespace DP_1.Model
         public int Count { get; set; }
         public List<Gate> Edges { get; set; }
 
-        public Gate() { }
+        public Gate()
+        {
+            this.Edges = new List<Gate>();
+            this.Count = 0;
+        }
 
         public Gate(string name)
         {
             Name = name;
+            this.Edges = new List<Gate>();
+            this.Count = 0;
         }
 
         public void addInput(bool input)
