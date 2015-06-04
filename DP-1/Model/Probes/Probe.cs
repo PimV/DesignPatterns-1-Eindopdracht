@@ -12,7 +12,7 @@ namespace DP_1.Model.Probes
 
         public string Name { get; set; }
 
-        public bool Result
+        public bool? Result
         {
             get
             {

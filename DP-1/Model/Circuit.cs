@@ -20,15 +20,9 @@ namespace DP_1.Model
             this.Gates = new List<Gate>();
             this.Root = null;
         }
-
-        public void addGate(Gate gate)
-        {
-            this.Gates.Add(gate);
-        }
         public void linkGate(Gate from, Gate to)
         {
             from.Edges.Add(to);
-            to.Edges.Add(from);
         }
 
         public void linkProbe(Gate from, Probe to)

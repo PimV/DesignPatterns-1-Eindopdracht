@@ -64,8 +64,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Exceptions\TooFewInputsException.cs" />
+    <Compile Include="Exceptions\MultipleInputException.cs" />
     <Compile Include="Model\Circuit.cs" />
-    <Compile Include="Model\Edge.cs" />
     <Compile Include="Model\Gates\ANDGate.cs" />
     <Compile Include="Model\Gates\Gate.cs" />
     <Compile Include="Model\Gates\GateFactory.cs" />
@@ -112,9 +113,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

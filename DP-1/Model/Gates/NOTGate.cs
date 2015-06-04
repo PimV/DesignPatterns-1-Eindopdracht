@@ -8,6 +8,10 @@ namespace DP_1.Model
 {
     public class NOTGate : Gate
     {
+        public NOTGate()
+        {
+            MaxCount = 1;
+        }
         public override bool result()
         {
             bool result = !A;

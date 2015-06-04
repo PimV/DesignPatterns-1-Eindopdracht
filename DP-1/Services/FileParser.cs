@@ -33,7 +33,7 @@ namespace DP_1.Services
             gates = new List<Gate>();
             inputs = new Dictionary<string, bool>();
             outputs = new List<Probe>();
-            path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Schemas\\circuit1.txt";
+            path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Schemas\\circuit2.txt";
             schemaText = File.ReadAllLines(path);
 
             Dictionary<string, List<string>> stringContainers = new Dictionary<string, List<string>>();
@@ -98,13 +98,13 @@ namespace DP_1.Services
                 foreach (Gate g in toGates)
                 {
                     circuit.linkGate(fromGate, g);
-                    Console.WriteLine("Linking [" + fromGate.Name + "] to [" + g.Name + "]");
+                    //Console.WriteLine("Linking [" + fromGate.Name + "] to [" + g.Name + "]");
                 }
 
                 foreach (Probe p in toOutput)
                 {
                     circuit.linkProbe(fromGate, p);
-                    Console.WriteLine("Outputting [" + fromGate.Name + "] to [" + p.Name + "]");
+                    //Console.WriteLine("Outputting [" + fromGate.Name + "] to [" + p.Name + "]");
                 }
             }
             else if (fromInput.Count() == 1)
@@ -113,7 +113,7 @@ namespace DP_1.Services
                 foreach (Gate g in toGates)
                 {
                     circuit.linkInput(input, g);
-                    Console.WriteLine("Input set  [" + input + "] to [" + g.Name + "]");
+                    //Console.WriteLine("Input set  [" + input + "] to [" + g.Name + "]");
                 }
             }
 
@@ -200,7 +200,7 @@ namespace DP_1.Services
 
                 string name = splitString[0];
                 string type = splitString[1];
-                Console.WriteLine(type);
+                //Console.WriteLine(type);
 
                 if (type.Equals("INPUT_HIGH"))
                 {

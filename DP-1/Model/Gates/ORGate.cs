@@ -17,6 +17,10 @@ namespace DP_1.Model
             {
                 result = false;
             }
+            else
+            {
+                result = true;
+            }
 
             pipelineResult(result);
 
