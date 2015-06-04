@@ -19,15 +19,22 @@ namespace DP_1.Model
 
         public void simulate()
         {
+            calculate();
+            print();
+        }
+
+        public void calculate()
+        {
             foreach (Gate g in Circuit.Gates)
             {
                 g.result();
-                //Console.WriteLine(g);
             }
+        }
 
+        public void print()
+        {
             foreach (Gate g in Circuit.Gates)
             {
-                //g.result();
                 Console.WriteLine(g);
             }
 
@@ -35,9 +42,6 @@ namespace DP_1.Model
             {
                 Console.WriteLine(p);
             }
-
-            //Console.WriteLine("S: " + s.Result);
-            //Console.WriteLine("COut: " + cout.Result);
         }
     }
 }

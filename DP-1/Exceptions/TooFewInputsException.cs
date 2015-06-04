@@ -16,7 +16,7 @@ namespace DP_1.Exceptions
         }
         public TooFewInputsException(Gate g)
         {
-            string message = "Error trying to calculate result on gate with name: " + g.Name + ". Inputs required: " + g.MaxCount + ". Inputs given: " + g.Count + ".";
+            string message = "Error trying to calculate result on gate with name: " + g.Name + ". Inputs required: " + g.MaxInputs + ". Inputs given: " + g.Inputs + ".";
         }
 
 

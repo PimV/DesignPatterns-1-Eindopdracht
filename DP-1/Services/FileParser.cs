@@ -19,6 +19,12 @@ namespace DP_1.Services
         private Dictionary<string, bool> inputs;
         private List<Probe> outputs;
         private Circuit circuit;
+
+        private int gatesCreated;
+        private int inputsCreated;
+        private int outputsCreated;
+        
+
         public Circuit Circuit
         {
             get
@@ -33,7 +39,16 @@ namespace DP_1.Services
             gates = new List<Gate>();
             inputs = new Dictionary<string, bool>();
             outputs = new List<Probe>();
-            path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Schemas\\circuit2.txt";
+        }
+
+        public void parse(string filePath)
+        {
+            inputsCreated = 0;
+            gatesCreated = 0;
+            outputsCreated = 0;
+
+            path = filePath;
+            //path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Schemas\\circuit1.txt";
             schemaText = File.ReadAllLines(path);
 
             Dictionary<string, List<string>> stringContainers = new Dictionary<string, List<string>>();
@@ -63,6 +78,12 @@ namespace DP_1.Services
                     readNodeSet(line, stringContainers);
                 }
             }
+
+            Console.WriteLine("Parse Results: ");
+            Console.WriteLine("Inputs found: " + inputsCreated);
+            Console.WriteLine("Outputs found: " + outputsCreated);
+            Console.WriteLine("Gates found: " + gatesCreated);
+            Console.WriteLine("Total objects created: " + (gatesCreated + inputsCreated + outputsCreated));
 
             circuit.Gates = gates;
             circuit.Outputs = outputs;
@@ -98,13 +119,11 @@ namespace DP_1.Services
                 foreach (Gate g in toGates)
                 {
                     circuit.linkGate(fromGate, g);
-                    //Console.WriteLine("Linking [" + fromGate.Name + "] to [" + g.Name + "]");
                 }
 
                 foreach (Probe p in toOutput)
                 {
                     circuit.linkProbe(fromGate, p);
-                    //Console.WriteLine("Outputting [" + fromGate.Name + "] to [" + p.Name + "]");
                 }
             }
             else if (fromInput.Count() == 1)
@@ -113,7 +132,6 @@ namespace DP_1.Services
                 foreach (Gate g in toGates)
                 {
                     circuit.linkInput(input, g);
-                    //Console.WriteLine("Input set  [" + input + "] to [" + g.Name + "]");
                 }
             }
 
@@ -138,7 +156,6 @@ namespace DP_1.Services
             }
             if (line.EndsWith("INPUT_HIGH;") || line.EndsWith("INPUT_LOW;"))
             {
-                //Console.WriteLine("INPUTTING INTO INPUT: " + line);
                 stringContainers["input"].Add(line.TrimEnd(';'));
             }
             if (line.EndsWith("PROBE;"))
@@ -149,9 +166,6 @@ namespace DP_1.Services
 
         public List<Gate> ParseGates(List<string> gateStrings)
         {
-            //List<Gate> gates = new List<Gate>();
-            //gates = new List<Gate>();
-
             foreach (string gateString in gateStrings)
             {
                 string[] splitString = gateString.Split(':');
@@ -163,14 +177,18 @@ namespace DP_1.Services
                 {
                     case "AND":
                         gates.Add(GateFactory.createGate(GateEnum.AND, name));
+                        gatesCreated++;
                         break;
                     case "OR":
                         gates.Add(GateFactory.createGate(GateEnum.OR, name));
+                        gatesCreated++;
                         break;
                     case "NOT":
                         gates.Add(GateFactory.createGate(GateEnum.NOT, name));
+                        gatesCreated++;
                         break;
                     default:
+                        Console.WriteLine("Unknown gate found: " + type);
                         break;
                 }
             }
@@ -189,6 +207,7 @@ namespace DP_1.Services
                 Probe p = new Probe();
                 p.Name = name;
                 outputs.Add(p);
+                outputsCreated++;
             }
         }
 
@@ -200,33 +219,19 @@ namespace DP_1.Services
 
                 string name = splitString[0];
                 string type = splitString[1];
-                //Console.WriteLine(type);
 
                 if (type.Equals("INPUT_HIGH"))
                 {
+                    
                     inputs.Add(name, true);
+                    inputsCreated++;
                 }
                 else if (type.Equals("INPUT_LOW"))
                 {
                     inputs.Add(name, false);
+                    inputsCreated++;
                 }
             }
         }
-
-        private void LinkEdges(object Component, object[] connectedComponents)
-        {
-            foreach (var component in connectedComponents)
-            {
-                // link components
-            }
-        }
-
-        //public void ParseInputs(List<string> inputStrings)
-        //{
-        //    foreach (String s in inputStrings)
-        //    {
-        //        //Console.WriteLine(s);
-        //    }
-        //}
     }
 }

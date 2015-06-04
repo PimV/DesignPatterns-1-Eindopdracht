@@ -10,7 +10,7 @@ namespace DP_1.Model
     {
         public NOTGate()
         {
-            MaxCount = 1;
+            MaxInputs = 1;
         }
         public override bool result()
         {

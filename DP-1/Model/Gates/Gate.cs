@@ -14,59 +14,64 @@ namespace DP_1.Model
         public bool B { get; set; }
 
         public bool? Result { get; set; }
-        public int Count { get; set; }
-        public int MaxCount { get; set; }
+        public int Inputs { get; set; }
+        public int MaxInputs { get; set; }
         public List<Gate> Edges { get; set; }
 
-        public Gate() { MaxCount = 2;  }
+        public Gate()
+        {
+            MaxInputs = 2;
+        }
 
         public Gate(string name)
         {
-            MaxCount = 2;
+            MaxInputs = 2;
             Name = name;
         }
 
         public void addInput(bool input)
         {
-            if (Count >= MaxCount)
+            if (Inputs >= MaxInputs)
             {
-                Count++;
+                Inputs++;
                 throw new MultipleInputException(string.Format("Error trying to add input to gate with name: {0}. " +
-                "Inputs found: {1}. Maximum Inputs allowed: {2}.", this.Name, this.Count, this.MaxCount));
+                "Inputs found: {1}. Maximum Inputs allowed: {2}.", this.Name, this.Inputs, this.MaxInputs));
             }
-            else if (Count == 1)
+            else if (Inputs == 1)
             {
                 this.B = input;
-                Count++;
+                Inputs++;
             }
-            else if (Count == 0)
+            else if (Inputs == 0)
             {
                 this.A = input;
-                Count++;
+                Inputs++;
             }
-
-        }
-
-        public virtual void compute()
-        {
 
         }
 
         public void pipelineResult(bool result)
         {
-            if (Count != MaxCount)
+            try
             {
-                throw new TooFewInputsException(string.Format("Error trying to calculate result on gate with name: {0}. " +
-                    "Inputs required: {1}. Inputs given: {2}.", this.Name, this.MaxCount, this.Count));
+                if (Inputs != MaxInputs)
+                {
+                    throw new TooFewInputsException(string.Format("Error trying to calculate result on gate with name: {0}. " +
+                        "Inputs required: {1}. Inputs given: {2}.", this.Name, this.MaxInputs, this.Inputs));
+                }
+
+                this.Result = result;
+
+                foreach (Gate g in Edges)
+                {
+                    g.addInput(result);
+                }
+            }
+            catch (TooFewInputsException e)
+            {
+                Console.WriteLine(e.Message);
             }
 
-
-            this.Result = result;
-
-            foreach (Gate g in Edges)
-            {
-                g.addInput(result);
-            }
         }
 
         public virtual bool result()
@@ -76,7 +81,6 @@ namespace DP_1.Model
 
         public override string ToString()
         {
-
             return this.Name + "\tA: " + A + " \t\t B: " + B + " \t\t RESULT: " + this.Result;
         }
     }

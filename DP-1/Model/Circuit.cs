@@ -34,19 +34,5 @@ namespace DP_1.Model
         {
             to.addInput(signal);
         }
-
-        public Gate createGate(GateEnum type)
-        {
-            Gate gate = GateFactory.createGate(type);
-            //gate.A = false;
-            //gate.B = false;
-            gate.Count = 0;
-            gate.Edges = new List<Gate>();
-            return gate;
-        }
-
-
-
-
     }
 }

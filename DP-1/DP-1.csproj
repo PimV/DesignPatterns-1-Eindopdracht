@@ -64,6 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controller\MainController.cs" />
     <Compile Include="Exceptions\TooFewInputsException.cs" />
     <Compile Include="Exceptions\MultipleInputException.cs" />
     <Compile Include="Model\Circuit.cs" />

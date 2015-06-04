@@ -16,7 +16,7 @@ namespace DP_1.Exceptions
         }
         public MultipleInputException(Gate g)
         {
-            string message = "Error trying to add input to gate with name: " + g.Name + ". Inputs found: " + g.Count + ". Maximum Inputs allowed: " + g.MaxCount + ".";
+            string message = "Error trying to add input to gate with name: " + g.Name + ". Inputs found: " + g.Inputs + ". Maximum Inputs allowed: " + g.MaxInputs + ".";
             Console.WriteLine(message);
         }
 
