@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DP_1.Model
 {
-    public class NOTGate : Gate
+    public class NOT : Gate
     {
-        public NOTGate()
+        public NOT()
         {
             MaxInputs = 1;
         }
@@ -19,6 +19,21 @@ namespace DP_1.Model
             pipelineResult(result);
 
             return result;
+        }
+
+        public override string getKey()
+        {
+            return "NOT";
+        }
+
+        public override object Clone()
+        {
+            return new NOT();
+        }
+
+        public override void show()
+        {
+            Console.WriteLine("IK BEN EEN NOT");
         }
 
     }

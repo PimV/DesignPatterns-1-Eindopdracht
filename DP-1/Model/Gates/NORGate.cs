@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DP_1.Model
 {
-    public class NORGate : Gate
+    public class NOR : Gate
     {
 
 
@@ -19,10 +19,24 @@ namespace DP_1.Model
                 result = true;
             }
 
-
             pipelineResult(result);
 
             return result;
+        }
+
+        public override string getKey()
+        {
+            return "NOR";
+        }
+
+        public override object Clone()
+        {
+            return new NOR();
+        }
+
+        public override void show()
+        {
+            Console.WriteLine("IK BEN EEN NOR");
         }
 
 

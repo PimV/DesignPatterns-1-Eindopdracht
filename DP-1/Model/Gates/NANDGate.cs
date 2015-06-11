@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DP_1.Model
 {
-    public class NANDGate : Gate
+    public class NAND : Gate
     {
 
         public override bool result()
@@ -17,6 +17,21 @@ namespace DP_1.Model
             }
 
             return true;
+        }
+
+        public override string getKey()
+        {
+            return "NAND";
+        }
+
+        public override object Clone()
+        {
+            return new NAND();
+        }
+
+        public override void show()
+        {
+            Console.WriteLine("IK BEN EEN NAND");
         }
     }
 }

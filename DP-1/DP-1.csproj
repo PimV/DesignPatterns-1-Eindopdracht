@@ -69,10 +69,8 @@
     <Compile Include="Exceptions\MultipleInputException.cs" />
     <Compile Include="Model\Circuit.cs" />
     <Compile Include="Model\Gates\ANDGate.cs" />
+    <Compile Include="Model\Gates\FactoryMethod.cs" />
     <Compile Include="Model\Gates\Gate.cs" />
-    <Compile Include="Model\Gates\GateFactory.cs" />
-    <Compile Include="Model\Gates\GateInfoAttribute.cs" />
-    <Compile Include="Enums\GateEnum.cs" />
     <Compile Include="Model\Gates\NANDGate.cs" />
     <Compile Include="Model\Gates\NORGate.cs" />
     <Compile Include="Model\Gates\NOTGate.cs" />
@@ -80,7 +78,6 @@
     <Compile Include="Model\Gates\XORGate.cs" />
     <Compile Include="Model\Probes\Probe.cs" />
     <Compile Include="Controller\Simulator.cs" />
-    <Compile Include="Services\Extensions.cs" />
     <Compile Include="Services\FileParser.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -114,7 +111,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Enums\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

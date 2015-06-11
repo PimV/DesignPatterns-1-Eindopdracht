@@ -1,5 +1,4 @@
 ﻿using DP_1.Model;
-using DP_1.Model.Gates;
 using DP_1.Model.Probes;
 using System;
 using System.Collections.Generic;
@@ -173,24 +172,13 @@ namespace DP_1.Services
                 string name = splitString[0];
                 string type = splitString[1];
 
-                switch (type)
+                Gate g = Gate.create(type.Trim(), name);
+                if (g != null)
                 {
-                    case "AND":
-                        gates.Add(GateFactory.createGate(GateEnum.AND, name));
-                        gatesCreated++;
-                        break;
-                    case "OR":
-                        gates.Add(GateFactory.createGate(GateEnum.OR, name));
-                        gatesCreated++;
-                        break;
-                    case "NOT":
-                        gates.Add(GateFactory.createGate(GateEnum.NOT, name));
-                        gatesCreated++;
-                        break;
-                    default:
-                        Console.WriteLine("Unknown gate found: " + type);
-                        break;
+                    gatesCreated++;
+                    gates.Add(g);
                 }
+               
             }
             return gates;
         }

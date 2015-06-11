@@ -6,10 +6,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using DP_1.View;
-using DP_1.Model.Gates;
+
 using DP_1.Model;
 using DP_1.Services;
 using DP_1.Controller;
+using Factory;
 
 namespace DP_1
 {
@@ -20,6 +21,8 @@ namespace DP_1
     {
         public App()
         {
+            
+
             MainWindow mainWindow = new MainWindow();
             MainController mainController = new MainController();
             mainController.mainWindow = mainWindow;

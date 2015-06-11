@@ -1,4 +1,5 @@
 ﻿using DP_1.Exceptions;
+using Factory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DP_1.Model
 {
-    public abstract class Gate
+    public abstract class Gate : ICloneable, IGetKey<String>
     {
         public string Name { get; set; }
         public bool A { get; set; }
@@ -84,5 +85,17 @@ namespace DP_1.Model
         {
             return this.Name + "\tA: " + A + " \t\t B: " + B + " \t\t RESULT: " + this.Result;
         }
+
+        public static Gate create(string type, string name)
+        {
+            Gate g = FactoryMethod<String, Gate>.create(type);
+            g.Name = name;
+            g.Edges = new List<Gate>();
+            return g;
+        }
+
+        public abstract String getKey();
+        public abstract object Clone();
+        public abstract void show();
     }
 }

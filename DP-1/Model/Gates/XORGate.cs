@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DP_1.Model
 {
-    public class XORGate : Gate
+    public class XOR : Gate
     {
 
         public override bool result()
@@ -20,6 +20,21 @@ namespace DP_1.Model
             pipelineResult(result);
 
             return result;
+        }
+
+        public override string getKey()
+        {
+            return "XOR";
+        }
+
+        public override object Clone()
+        {
+            return new XOR();
+        }
+
+        public override void show()
+        {
+            Console.WriteLine("IK BEN EEN XOR");
         }
 
     }

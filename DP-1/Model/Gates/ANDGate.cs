@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DP_1.Model
 {
-    public class ANDGate : Gate
+    public class AND : Gate
     {
         public override bool result()
         {
@@ -20,6 +20,22 @@ namespace DP_1.Model
 
             return result;
 
+        }
+
+        public override string getKey()
+        {
+            return "AND";
+        }
+
+        public override object Clone()
+        {
+            
+            return new AND();
+        }
+
+        public override void show()
+        {
+            Console.WriteLine("IK BEN EEN AND");
         }
     }
 }
