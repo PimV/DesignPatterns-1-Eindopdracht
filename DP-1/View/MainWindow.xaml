@@ -5,7 +5,8 @@
     <Grid>
         <Button Content="Select file...
                 " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="69" Click="fileChooserClicked"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="550,420,0,0" VerticalAlignment="Top" Width="74" Click="simulate"/>
+        <Button Content="Simulate!" HorizontalAlignment="Left" Margin="550,10,0,0" VerticalAlignment="Top" Width="74" Click="simulate"/>
+        <Label x:Name="errMsg" Content="" HorizontalAlignment="Left" Margin="0,37,0,0" VerticalAlignment="Top" Width="634" Height="415"/>
 
     </Grid>
 </Window>

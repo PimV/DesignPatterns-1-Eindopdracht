@@ -40,20 +40,21 @@ namespace DP_1.Model
             else if (Inputs == 1)
             {
                 this.B = input;
-                Inputs++;
+                //Inputs++;
             }
             else if (Inputs == 0)
             {
                 this.A = input;
-                Inputs++;
+                //Inputs++;
             }
+            Inputs++;
 
         }
 
         public void pipelineResult(bool result)
         {
-            try
-            {
+            //try
+            //{
                 if (Inputs != MaxInputs)
                 {
                     throw new TooFewInputsException(string.Format("Error trying to calculate result on gate with name: {0}. " +
@@ -66,11 +67,11 @@ namespace DP_1.Model
                 {
                     g.addInput(result);
                 }
-            }
-            catch (TooFewInputsException e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            //}
+            //catch (TooFewInputsException e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
 
         }
 

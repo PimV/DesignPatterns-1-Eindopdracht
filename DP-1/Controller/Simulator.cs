@@ -43,5 +43,23 @@ namespace DP_1.Model
                 Console.WriteLine(p);
             }
         }
+
+        public string result()
+        {
+            string resultString = "";
+            foreach (Gate g in Circuit.Gates)
+            {
+                resultString += g + "\n";
+                //Console.WriteLine(g);
+            }
+
+            foreach (Probe p in Circuit.Outputs)
+            {
+                resultString += p + "\n";
+                //Console.WriteLine(p);
+            }
+
+            return resultString;
+        }
     }
 }

@@ -22,6 +22,7 @@ namespace DP_1
         {
             MainWindow mainWindow = new MainWindow();
             MainController mainController = new MainController();
+            mainController.mainWindow = mainWindow;
             mainWindow.MainController = mainController;
             mainWindow.Show();
 

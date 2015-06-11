@@ -10,31 +10,31 @@ namespace DP_1.Model.Gates
     public static class GateFactory
     {
 
-        public static Gate createGate(GateEnum gate)
-        {
-            var gateAttribute = gate.GetAttribute<GateInfo>();
-            if (gateAttribute == null)
-            {
-                return null;
-            }
-            var type = gateAttribute.Type;
-            Gate result = Activator.CreateInstance(type) as Gate;
-            return result;
-        }
+        //public static Gate createGate(GateEnum gate)
+        //{
+        //    var gateAttribute = gate.GetAttribute<GateInfo>();
+        //    if (gateAttribute == null)
+        //    {
+        //        return null;
+        //    }
+        //    var type = gateAttribute.Type;
+        //    Gate result = Activator.CreateInstance(type) as Gate;
+        //    return result;
+        //}
 
-        public static Gate createGate(GateEnum gate, bool A, bool B)
-        {
-            var gateAttribute = gate.GetAttribute<GateInfo>();
-            if (gateAttribute == null)
-            {
-                return null;
-            }
-            var type = gateAttribute.Type;
-            Gate result = Activator.CreateInstance(type) as Gate;
-            result.A = A;
-            result.B = B;
-            return result;
-        }
+        //public static Gate createGate(GateEnum gate, bool A, bool B)
+        //{
+        //    var gateAttribute = gate.GetAttribute<GateInfo>();
+        //    if (gateAttribute == null)
+        //    {
+        //        return null;
+        //    }
+        //    var type = gateAttribute.Type;
+        //    Gate result = Activator.CreateInstance(type) as Gate;
+        //    result.A = A;
+        //    result.B = B;
+        //    return result;
+        //}
         public static Gate createGate(GateEnum gate, String name)
         {
             var gateAttribute = gate.GetAttribute<GateInfo>();
@@ -49,5 +49,7 @@ namespace DP_1.Model.Gates
 
             return result;
         }
+
+
     }
 }

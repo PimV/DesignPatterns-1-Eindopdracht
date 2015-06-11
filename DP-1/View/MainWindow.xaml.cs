@@ -51,6 +51,10 @@ namespace DP_1.View
                 MainController.loadFile(openFileDialog1.FileName);
             }
         }
+        public void setErrorMessage(string message)
+        {
+            errMsg.Content = message;
+        }
 
         private void simulate(object sender, RoutedEventArgs e)
         {
